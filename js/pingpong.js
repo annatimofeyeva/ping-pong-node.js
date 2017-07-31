@@ -22,7 +22,7 @@ Calculator.prototype.pingPong = function(goal) {
     }
   }
   return output;
-}
+};
 //Node comes. We export the blueprint of our Calculator objects by turning it //into a Node module - Calculator is now available for Node
 
 exports.calculatorModule = Calculator;

@@ -1,3 +1,4 @@
+// require statements:
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -5,6 +6,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var del = require('del');
+var jshint = require('gulp-jshint');
 
 var buildProduction = utilities.env.production;
 
@@ -41,4 +43,14 @@ gulp.task("build", ['clean'], function(){
   } else {
     gulp.start('jsBrowserify');
   }
+});
+
+//to fix syntax issues - run periodically with //$gulp jshint to fix bugs
+
+var jshint = require('gulp-jshint');
+
+gulp.task('jshint', function(){
+ return gulp.src(['js/*.js'])
+   .pipe(jshint())
+   .pipe(jshint.reporter('default'));
 });
