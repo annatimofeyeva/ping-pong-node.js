@@ -23,7 +23,7 @@ Calculator.prototype.pingPong = function(goal) {
     }
   }
   return output;
-}
+};
 //Node comes. We export the blueprint of our Calculator objects by turning it //into a Node module - Calculator is now available for Node
 
 exports.calculatorModule = Calculator;
@@ -84,6 +84,10 @@ $(document).ready(function(){
     $('#signup').hide();
     $('#solution').prepend('<p>Thank you, ' + email + ' has been added to our list!</p>');
   });
+});
+
+$(document).ready(function(){
+  $('#time').text(moment());
 });
 
 },{"./../js/pingpong.js":1}]},{},[2]);
