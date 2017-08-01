@@ -1,4 +1,4 @@
-var apiKey = "4482eb798ce5a8462165873ffe2e0dff";
+var apiKey = require('./../.env').apiKey;
 
 
 $(document).ready(function() {
