@@ -1,7 +1,6 @@
 {
   "name": "ping-pong-node.js",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "bower-files": "^4.0.0",
     "browserify": "^14.4.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -18,5 +18,15 @@
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annatimofeyeva/ping-pong-node.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/annatimofeyeva/ping-pong-node.js/issues"
+  },
+  "homepage": "https://github.com/annatimofeyeva/ping-pong-node.js#readme",
+  "description": ""
 }
