@@ -28,6 +28,25 @@ $(document).ready(function(){
 
 var apiKey = "4482eb798ce5a8462165873ffe2e0dff";
 
+
+$(document).ready(function() {
+  $('#weather-location').click(function() {
+    var city = $('#location').val();
+    $('#location').val("");
+
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey)
+     .then(function(response){
+        $('.showWeather').text("The humidity in " + city + " is " + response.main.humidity + "%");
+     })
+
+     .fail(function(error) {
+        $('.showWeather').text(error.responseJSON.message);
+      });
+  });
+});
+
+//refactoring code with fail()
+/*
 $(document).ready(function() {
   $('#weather-location').click(function() {
     var city = $('#location').val();
@@ -38,9 +57,9 @@ $(document).ready(function() {
          $('.showWeather').text("The humidity in " + city + " is " + response.main.humidity + "%");
       });
    });
-});
+});*?
 
-//refuctoring code
+//refuctoring code - then()
 
 /*
 $(document).ready(function() {
