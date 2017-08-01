@@ -35,6 +35,7 @@ $(document).ready(function() {
     $('.showWeather').text("The city you have chosen is " + city + ".");
     $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey, function(response) {
       console.log(response);
+      console.log(JSON.stringify(response));
     });
   });
 });
